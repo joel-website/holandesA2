@@ -43,7 +43,7 @@
             <div id="sentences">
                 <!-- Sentences will be dynamically loaded here from JSON -->
             </div>
-            <button type="button" class="btn btn-primary mt-4" onclick="initialValidate()">Valideren</button>
+            <button type="button" class="btn btn-primary mt-4" id="validateButton" onclick="initialValidate()" style="display:none;">Valideren</button>
         </form>
     </div>
 
@@ -74,6 +74,7 @@
 
             if (!selectedUnitUrl) {
                 document.getElementById("sentences").innerHTML = ""; // Clear sentences if no unit selected
+                document.getElementById("validateButton").style.display = "none"; // Hide validate button
                 return;
             }
 
@@ -106,6 +107,9 @@
                         </div>
                     `;
                 });
+
+                // Show the validate button after loading sentences
+                document.getElementById("validateButton").style.display = "block";
             } catch (error) {
                 console.error("Error loading sentences:", error);
             }
