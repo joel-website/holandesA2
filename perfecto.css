@@ -1,0 +1,158 @@
+/* Reset básicos para mejorar la apariencia en diferentes navegadores */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 1.8rem;
+    color: #4a4a4a;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-info:hover {
+    background-color: #117a8b;
+}
+
+/* Diseño de las frases */
+.sentence {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.sentence:hover {
+    transform: translateY(-2px);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.col-md-1, .col-md-7, .col-md-2 {
+    margin-bottom: 10px;
+}
+
+.input-group-text {
+    background-color: #f1f3f5;
+    border: none;
+    color: #495057;
+}
+
+input[type="text"] {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 8px;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.infinitive {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+/* Iconos de validación */
+.correct {
+    color: #28a745 !important;
+}
+
+.incorrect {
+    color: #dc3545 !important;
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .col-md-1, .col-md-7, .col-md-2 {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    .sentence {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
